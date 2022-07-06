@@ -1,5 +1,11 @@
+import { observer } from 'mobx-react-lite'
 import { render } from 'preact'
-import { App } from './app'
+import App from './app'
 import './index.css'
 
-render(<App />, document.getElementById('app')!)
+
+const AppObserved = observer(() => {
+    return <App/>
+})
+
+render( <AppObserved/>, document.getElementById('app')!)

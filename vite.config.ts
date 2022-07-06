@@ -9,7 +9,11 @@ export default defineConfig({
       "react-dom/test-utils": "preact/test-utils",
       "react-dom": "preact/compat",     // Must be below test-utils
       "react/jsx-runtime": "preact/jsx-runtime"
-    }
+    },
   },
-  plugins: [preact()]
+  plugins: [preact({
+    babel: {
+      plugins: [  ['@babel/plugin-proposal-decorators', { legacy: true }]]
+    }
+  })]
 })
