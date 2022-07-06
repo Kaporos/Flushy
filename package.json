@@ -8,7 +8,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "preact": "^10.5.15"
+    "mobx": "^6.6.1",
+    "preact": "^10.5.15",
+    "stitches": "^1.2.11"
   },
   "devDependencies": {
     "@preact/preset-vite": "^2.1.5",
