@@ -18,8 +18,11 @@ const StyledDiv = styled("div", {
     display: "grid",
     placeItems: "center",
     "&:hover": {
-        cursor: "pointer"
-    }
+        cursor: "pointer",
+        transform: "translateY(-5px)"
+
+    },
+    transition: "all .2s ease-in-out",
 })
 
 export const ApplicationButton = (props: IApplicationButtonProps) => {
