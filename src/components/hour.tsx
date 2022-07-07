@@ -4,8 +4,8 @@ import { localInfoStore } from "../stores/localInfosStore"
 import { observer } from "mobx-react-lite"
 const HourH1 = styled("h1", {
     fontFamily: theme.fonts.general,
-    fontSize: "150px",
-    color: "white",
+    fontSize: "2vw",
+    color: "black",
     fontWeight: "500"
 })
  function HourComponent() {
