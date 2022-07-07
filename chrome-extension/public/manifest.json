@@ -1,0 +1,19 @@
+{
+   "name": "Flushy Extension",
+   "description": "This extension is made for demonstration purposes",
+   "version": "1.0",
+   "manifest_version": 3,
+   "permissions": [
+      "tabs",
+      "activeTab",
+      "scripting"
+   ],
+   "background": {
+      "service_worker": "background.js"
+   },
+   "content_scripts": [{
+      "matches": ["<all_urls>"],
+      "js": ["contentScript.js"]
+   }],
+   "action": {}
+}
