@@ -3,19 +3,19 @@ lockfileVersion: 5.3
 specifiers:
   '@babel/plugin-proposal-decorators': ^7.18.6
   '@preact/preset-vite': ^2.1.5
+  '@stitches/react': ^1.2.8
   mobx: ^6.6.1
   mobx-react-lite: ^3.4.0
   preact: ^10.5.15
-  stitches: ^1.2.11
   typescript: ^4.5.4
   vite: ^2.9.9
 
 dependencies:
   '@babel/plugin-proposal-decorators': 7.18.6
+  '@stitches/react': 1.2.8
   mobx: 6.6.1
   mobx-react-lite: 3.4.0_mobx@6.6.1
   preact: 10.9.0
-  stitches: 1.2.11
 
 devDependencies:
   '@preact/preset-vite': 2.3.0_preact@10.9.0+vite@2.9.13
@@ -407,6 +407,12 @@ packages:
       estree-walker: 2.0.2
       picomatch: 2.3.1
     dev: true
+
+  /@stitches/react/1.2.8:
+    resolution: {integrity: sha512-9g9dWI4gsSVe8bNLlb+lMkBYsnIKCZTmvqvDG+Avnn69XfmHZKiaMrx7cgTaddq7aTPPmXiTsbFcUy0xgI4+wA==}
+    peerDependencies:
+      react: '>= 16.3.0'
+    dev: false
 
   /ansi-styles/3.2.1:
     resolution: {integrity: sha512-VT0ZI6kZRdTh8YyJw3SMbYm/u+NqfsAxEpWO0Pf9sq8/e94WxxOpPKx9FR1FlyCtOVDNOQ+8ntlqFxiRc+r5qA==}
@@ -838,10 +844,6 @@ packages:
     resolution: {integrity: sha512-R0XvVJ9WusLiqTCEiGCmICCMplcCkIwwR11mOSD9CR5u+IXYdiseeEuXCVAjS54zqwkLcPNnmU4OeJ6tUrWhDw==}
     engines: {node: '>=0.10.0'}
     dev: true
-
-  /stitches/1.2.11:
-    resolution: {integrity: sha512-s+Ms7C05YrzDXp/aiclV9eW/6B4xiSVWrY88Vyiac2GqkDwFD2OB5TBRDr2M9hRVMpz7RR5PsGkW1KhPo+eIgg==}
-    dev: false
 
   /supports-color/5.5.0:
     resolution: {integrity: sha512-QjVjwdXIt408MIiAqCX4oUKsgU2EqAGzs2Ppkm4aQYbjm+ZEWEcW4SfFNTr4uMNZma0ey4f5lgLrkB0aX0QMow==}
