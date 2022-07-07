@@ -19,8 +19,15 @@ export class OpenTabMessage extends FlushyMessage {
     }
 }
 
+export class GoToMainMessage extends FlushyMessage {
+    type = MessageType.GoToMainMessage
+    constructor() {
+        super()
+    }
+}
+
 export enum MessageType {
     OpenTab = "flushy:open",
-    CloseTab = "flushy:close",
+    GoToMainMessage = "flushy:main",
 }
-export type Message = OpenTabMessage
+export type Message = OpenTabMessage | GoToMainMessage

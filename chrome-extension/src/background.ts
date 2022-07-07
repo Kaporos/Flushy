@@ -5,6 +5,12 @@ chrome.runtime.onMessage.addListener(function(message: Message, sender, sendResp
         case MessageType.OpenTab:
             const data = message as OpenTabMessage
             openTab(data.url)
+            break;
+        case MessageType.GoToMainMessage:
+            chrome.tabs.highlight({
+                tabs: [0]
+            })
+            break;
     }
 });
 
@@ -19,13 +25,12 @@ function openTab(url: string) {
                 return
             }
             const updatedTab = await chrome.tabs.get(tab.id)
-            console.log(updatedTab)
             if (updatedTab.status == "complete") {
                 chrome.tabs.highlight({
                     tabs: [tab.index]
                 })
                 clearInterval(changeInterval)
             }
-        }, 500)
+        }, 100)
     })
 }

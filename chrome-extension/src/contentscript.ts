@@ -1,11 +1,9 @@
 import { MessageType, OpenTabMessage } from "./types/messages";
 
 
-document.addEventListener(MessageType.OpenTab, function(data) {
-    console.log(data)
-    //@ts-ignore
-    let message = new OpenTabMessage(data.detail.url)
-    console.log(message) 
-    //@ts-ignore
-    chrome.runtime.sendMessage(message);
+Object.values(MessageType).forEach((type) => {
+    document.addEventListener(type, function(data) {
+        //@ts-ignore
+        chrome.runtime.sendMessage(data.detail as MessageType[type]);
+    })
 })
